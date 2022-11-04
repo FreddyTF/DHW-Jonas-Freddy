@@ -28,7 +28,5 @@ while True:
     print(f"Published: {json.dumps(json_dict)}")
 
     # wait to get nearly exakt 5 s delay
-    while time.perf_counter_ns() < target_time:
-        pass
 
 

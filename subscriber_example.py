@@ -21,10 +21,6 @@ print(db_version)
 
 def on_message(client, userdata, msg):
     print(f"Message received [{msg.topic}]: {msg.payload}")
-    print(msg.topic)
-    print(msg.payload)
-    print(client)
-    print(msg.payload.decode('utf-8'))
     json_object = None
     try:
         json_object = json.loads(msg.payload.decode("utf-8"))
@@ -32,7 +28,7 @@ def on_message(client, userdata, msg):
         print("invalid json")
         json_object = None
     if json_object:
-        sql = f"INSERT INTO staging.messung(payload, erstellt_am, quelle) VALUES ({msg.payload},'{json_object['zeit']}', S1freddyischread);"
+        sql = f"INSERT INTO staging.messung(payload, erstellt_am ,quelle) VALUES ('{msg.payload.decode('utf-8')}', '{json_object['zeit']}','S1freddyischread');"
         print(f"SQL Statement: {sql}")
         try:
             # execute the INSERT statement
