@@ -47,11 +47,12 @@ def on_connect(client, userdata, flags, rc):
     # Subscribe here!
     client.subscribe("DataMgmt/FIN", qos=1)
 
+
 ### The the mqtt client ###
 # define the broker adress
-broker_address="broker.hivemq.com"
+broker_address = "broker.hivemq.com"
 # create the client
-client = mqtt.Client(client_id="S1freddyischread", clean_session=False) #use your own unique ID
+client = mqtt.Client(client_id="S1freddyischread", clean_session=False)  # use your own unique ID
 # define the callbacks
 client.on_connect = on_connect
 client.on_message = on_message
