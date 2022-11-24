@@ -1,0 +1,108 @@
+@startuml
+!theme cyborg
+hide circle
+'avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "S_Messung" as s01 #line:Lavender;back:PapayaWhip {
+*messung_id : integer <<generated>>
+--
+*loaddate : timestamp
+*recordsource : varchar(10)
+}
+entity "R_Land" as rland #line:Lavender;back:red {
+*land_id : integer <<pk>>
+--
+*ort: varchar(200) 
+*erstell_am: timestamp
+*quelle: varchar(20)
+}
+
+entity "L_fahrzeuglink" as lfahrzeuglink #line:Lavender;back:Purple {
+*lf_id : binary <<generated>>
+--
+*v_id : binary <<fk>>
+*loaddate : timestamp
+*recordsource : varchar(10)
+}
+
+entity "S_kfzzuordnung" as skfzzuordnung #line:Lavender;back:PapayaWhip {
+*lf_id: binary <<fk>>
+*loaddate : timestamp
+--
+*kfz_kennzeichen: varchar(20)
+*loaddate : timestamp
+*recordsource : varchar(10)
+}
+
+entity "L_kundenlink" as lkundenlink #line:Lavender;back:Purple {
+*lk_id : binary <<generated>>
+--
+*k_id: binary <<fk>>
+*loaddate : timestamp
+*recordsource : varchar(10)
+}
+
+entity "R_ort" as rort #line:Lavender;back:red {
+*r_ort_id : integer <<pk>>
+--
+*ort: varchar(200)
+*land_id: integer <<fk>>
+*erstell_am: timestamp
+*quelle: varchar(20)
+}
+
+entity "H_fahrzeug" as hfahrzeug #line:purple;back:gold {
+*v_id : integer <<generated>>
+--
+*fin: varchar(17) <<unique>>
+*loaddate : timestamp
+*recordsource : varchar(10)
+}
+entity "S_fahrzeugdaten" as sfahrzeugdaten #line:Lavender;back:PapayaWhip {
+*lf_id : binary <<fk>> 
+*loaddate : timestamp
+--
+*baujahr: integer
+*modell: varchar(200)
+*erstell_am: timestamp
+*quelle: varchar(20)
+}
+entity "H_kunde" as hkunde #line:purple;back:gold {
+*k_id : integer <<generated>>
+--
+*loaddate : timestamp
+*recordsource : varchar(10)
+}
+entity "s_kundendaten" as skundendaten #line:Lavender;back:PapayaWhip {
+*lk_id : binary <<fk>>
+*loaddate : timestamp
+--
+*ort_id: integer <<fk>>
+*vorname: varchar(200)
+*nachname: varchar(200)
+*anrede: varchar(20)
+*geschlecht: varchar(20)
+*geburtsdatum: date
+*erstell_am: timestamp
+*quelle: varchar(20)
+}
+entity "s_hersteller" as shersteller #line:Lavender;back:PapayaWhip {
+*lf_id : binary <<fk>>
+*loaddate : timestamp
+--
+*hersteller: varchar(200)
+*erstellt_am: timestamp
+*quelle: varchar(20)
+}
+
+rort --|> rland
+skundendaten --|> rort
+shersteller --|> lfahrzeuglink
+sfahrzeugdaten --|> lfahrzeuglink
+skfzzuordnung --|> lfahrzeuglink
+lfahrzeuglink --|> hfahrzeug
+lkundenlink --|> hkunde
+skundendaten --|> lfahrzeuglink
+skundendaten --|> lkundenlink
+@enduml
