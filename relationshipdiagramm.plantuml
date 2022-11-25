@@ -6,14 +6,18 @@ skinparam linetype ortho
 
 entity "S_Messung" as s01 #line:yellow;back:yellow {
 *messung_id : integer <<generated>>
+*loaddate : timestamp
 --
-loaddate : timestamp
+payload: JSON
+erstell_am: timestamp with time zone
+quelle: varchar(20)
+
 recordsource : varchar(10)
 }
 entity "R_Land" as rland #line:gray;back:gray {
 *land_id : integer <<pk>>
 --
-ort: varchar(200) 
+land: varchar(200) 
 erstell_am: timestamp
 quelle: varchar(20)
 }
@@ -31,7 +35,6 @@ entity "S_kfzzuordnung" as skfzzuordnung #line:yellow;back:yellow {
 *loaddate : timestamp
 --
 kfz_kennzeichen: varchar(20)
-loaddate : timestamp
 recordsource : varchar(10)
 }
 
@@ -96,7 +99,7 @@ erstellt_am: timestamp
 quelle: varchar(20)
 }
 
-rort --|> rland
+rort }-- rland
 skundendaten --{ rort
 shersteller --{ lfahrzeuglink
 lkundenlink }-- hkunde
