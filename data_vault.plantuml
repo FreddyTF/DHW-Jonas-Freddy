@@ -10,7 +10,7 @@ entity "S_Messung" as s01 #line:yellow;back:yellow {
 --
 fin: varchar(17)
 zeit:timestamp 
-geschwindigkeit:60,
+geschwindigkeit: float,
 ort: integer
 erstell_am: timestamp with time zone
 quelle: varchar(20)

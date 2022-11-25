@@ -1,0 +1,80 @@
+@startuml
+!theme cyborg
+hide circle
+'avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "F_Messung" as Messung #line:green;back:green {
+*messung_id : integer <<generated>>
+--
+messung_wurde_erzeugt: timestamp
+messung_ist_im_dwh_eingetroffen: timestamp
+ort_id: integer <<fk>>
+fahrzeug_id: integer <<fk>>
+kunden_id: integer <<fk>>
+
+fin: varchar(17)
+zeit:timestamp 
+geschwindigkeit:60,
+ort: integer
+erstellt_am: timestamp with time zone
+quelle: varchar(20)
+}
+
+entity "D_Kunden" as Kunden #line:gray;back:gray {
+*kunden_id : integer <<pk>>
+--
+vorname: varchar(200)
+nachname: varchar(200)
+anrede: varchar(20)
+geschlecht: varchar(20)
+geburtsdatum: date
+erstellt_am_kunde: timestamp
+quelle_kunde: varchar(20)
+--
+ort: varchar(200)
+erstellt_am_ort: timestamp
+quelle_ort: varchar(20)
+--
+land: varchar(200)
+erstellt_am_land: timestamp
+quelle_land: varchar(20)
+}
+
+entity "D_Ort" as Ort #line:gray;back:gray {
+*ort_id : integer <<pk>>
+--
+ort: varchar(200)
+erstellt_am_ort: timestamp
+quelle_ort: varchar(20)
+--
+land: varchar(200)
+erstellt_am_land: timestamp
+quelle_land: varchar(20)
+}
+
+entity "D_Fahrzeug" as Fahrzeug #line:gray;back:gray {
+*fahrzeug_id: integer <<pk>> 
+--
+fin: varchar(17)
+baujahr: integer
+modell: integer
+erstellt_am_fahrzeug: timestamp
+quelle_fahrzeug: varchar(20)
+--
+kfz_kennzeichen: varchar(20)
+erstellt_am_kfzzuordnung: varchar(20)
+quelle_kfzzuordnung: varchar(20)
+--
+hersteller_code: char(3)
+hersteller: varchar(200)
+erstellt_am_hersteller: timestamp
+quelle_hersteller: varchar(20)
+}
+
+Messung }-- Kunden
+Messung }-- Ort
+Messung }-- Fahrzeug
+
+@enduml
+
