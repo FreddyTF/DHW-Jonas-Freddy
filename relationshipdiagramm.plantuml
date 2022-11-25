@@ -8,11 +8,12 @@ entity "S_Messung" as s01 #line:yellow;back:yellow {
 *messung_id : integer <<generated>>
 *loaddate : timestamp
 --
-payload: JSON
+fin: varchar(17)
+zeit:timestamp 
+geschwindigkeit:60,
+ort: integer
 erstell_am: timestamp with time zone
 quelle: varchar(20)
-
-recordsource : varchar(10)
 }
 entity "R_Land" as rland #line:gray;back:gray {
 *land_id : integer <<pk>>
@@ -74,6 +75,7 @@ quelle: varchar(20)
 entity "H_kunde" as hkunde #line:blue;back:blue {
 *k_id : integer <<generated>>
 --
+kunde_id: integer <<unique>>
 loaddate : timestamp
 recordsource : varchar(10)
 }
