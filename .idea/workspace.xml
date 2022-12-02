@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6b642e-28b9-4fe1-bf64-f2a3fcdb40f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/etl/models/mart/d_fahrzeug_incremental_prs.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/etl/models/mart/d_kunde_incremental_prs.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/etl/models/mart/d_ort_incremental_prs.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/etl/models/mart/f_messung_incremental_prs.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/etl/models/staging/sources.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cc6b642e-28b9-4fe1-bf64-f2a3fcdb40f8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +128,7 @@
       <workItem from="1668772388787" duration="809000" />
       <workItem from="1669363215548" duration="621000" />
       <workItem from="1669400754218" duration="3000" />
-      <workItem from="1669800423998" duration="4270000" />
+      <workItem from="1669800423998" duration="4404000" />
     </task>
     <servers />
   </component>

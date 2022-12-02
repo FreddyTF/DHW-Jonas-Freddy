@@ -1,22 +1,22 @@
 {{
     config(
-        materialized='incremental'
+        materialized='table'
     )
 }}
 
-with w_cust as (
-    select *
-    from {{ source('staging', 'stg_customer_prs') }}
-
-    -- filter for an incremental run to get new data
-    {% if is_incremental() %}
-
-    where insertedat > (select max(insertedat) from {{ this }})
-
-    {% endif %}
-
+with w_messung as (
+    SELECT
+        staging.fahrzeug.kunde_id as d_kunde_key,
+        payload ->> 'ort' as d_ort_messung_key,
+        payload ->> 'fin' as d_fahrzeug_key,
+        staging.messung.erstellt_am as messung_eingetroffen,
+        payload ->> 'zeit' as messung_erzeugt, 
+        payload ->> 'geschwindigkeit' as geschwindigkeit 
+    from staging.messung
+    inner join staging.fahrzeug 
+        on staging.fahrzeug.fin = 
+        (staging.messung.payload ->> 'fin')
 )
-select c.customerid
-     , c.customername
-     , c.insertedat
-from w_cust c
+
+select m.d_kunde_key, m.d_ort_messung_key, m.d_fahrzeug_key, m.messung_eingetroffen, m.messung_erzeugt, m.geschwindigkeit
+from w_messung m
