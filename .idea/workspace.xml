@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc6b642e-28b9-4fe1-bf64-f2a3fcdb40f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/publisher_example.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/subscriber_example.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/01_create_staging.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/03_staging.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/02_load_staging.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/etl/models/staging/sources.yml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="2H5Aq12v40wIJ3o8gy0XCx5eitV" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/etl/models/abu" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Duale Hochschule Baden-Württemberg Stuttgart/Dokumente/04_JournalistTool_USA" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -141,8 +149,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Frontend" />
-        <item itemvalue="Python.subscriber_example" />
         <item itemvalue="Python.publisher_example" />
+        <item itemvalue="Python.subscriber_example" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +168,8 @@
       <workItem from="1669363215548" duration="621000" />
       <workItem from="1669400754218" duration="3000" />
       <workItem from="1669800423998" duration="4404000" />
-      <workItem from="1670441661809" duration="2225000" />
+      <workItem from="1670441661809" duration="3775000" />
+      <workItem from="1670495798711" duration="8594000" />
     </task>
     <servers />
   </component>
@@ -182,20 +191,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Frontend.py</url>
-          <line>100</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DHW_Jonas_Freddy$subscriber_example.coverage" NAME="subscriber_example Coverage Results" MODIFIED="1668772487717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DHW_Jonas_Freddy$publisher_example.coverage" NAME="publisher_example Coverage Results" MODIFIED="1668772473444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DHW_Jonas_Freddy$Frontend.coverage" NAME="Frontend Coverage Results" MODIFIED="1670448905839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DHW_Jonas_Freddy$subscriber_example.coverage" NAME="subscriber_example Coverage Results" MODIFIED="1670500397042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DHW_Jonas_Freddy$publisher_example.coverage" NAME="publisher_example Coverage Results" MODIFIED="1670500966876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DHW_Jonas_Freddy$Frontend.coverage" NAME="Frontend Coverage Results" MODIFIED="1670506063832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

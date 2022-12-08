@@ -13,7 +13,7 @@ client = mqtt.Client(client_id="P1jonasischready", clean_session=False)  # use y
 client.connect(broker_adress)
 
 # create sample json as dict
-json_dict = {"fin": "WDDU411STM9032150", "zeit": "01.01.2020 15:34:05.123", "geschwindigkeit": 200, "ort": 1}
+json_dict = {"fin": "WDDU411STM9032151", "zeit": "01.01.2020 15:34:05.123", "geschwindigkeit": 150, "ort": 10}
 
 ### Publish forever ###
 while 1:
